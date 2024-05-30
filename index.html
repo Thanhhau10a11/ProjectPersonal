@@ -1,1332 +1,876 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en"></html>
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Project</title>
+    <title>HauMobile</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/assets/fonts/fontawesome-free-6.3.0-web/css/all.min.css">
-    <link rel="stylesheet" href="assets/css/grid.css">
-    <link rel="stylesheet" href="assets/css/base.css">
-    <link rel="stylesheet" href="assets/css/main.css">
-    <link rel="stylesheet" href="assets/css/responsive.css">
+    <link rel="icon" type="image/x-icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR1_exEvni0DdGqoE12GyDM8unajXze1VX1Zg&usqp=CAU">
+  
 
-
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="/styles/fonts/fontawesome-free-6.3.0-web/css/all.min.css">
+    <link rel="stylesheet" href="/styles/css/base.css"> 
+    <link rel="stylesheet" href="/styles/css/main.css">
+    <link rel="stylesheet" href="/styles/css/responsive.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="./scripts/main.js"></script>
 </head>
 <body>
-   <nav>
-     <!-- navbar -->
-     <div class="top-navbar hide-on-tablet hide-on-mobile">
-        <div class="grid">
-           <div class="row">
-                <div class="col c-12 l-12 m-12">
-                    <div class="navbar_list">
-                        <ul class="navbar_list-menu">
-                            <li class="navbar_list-menu-selection">
-                                <a href="">Bản mobile</a>
+    <div id="preloader" class="preloader">
+        <div class="loader"></div>
+    </div> 
+   <div id="app" class="app">
+    <nav>
+        <!-- navbar -->
+        <div class="top-navbar hide-on-tablet hide-on-mobile">
+           <div class="container-fluid">
+              <div class="row">
+                   <div class="col c-12 l-12 m-12">
+                       <div class=" navbar_list">
+                           <ul class="navbar_list-menu">
+                               <li class="navbar_list-menu-selection">
+                                   <a href="">Bản mobile</a>
+                               </li>
+                               <li class="navbar_list-menu-selection">
+                                   <a href="">Giới thiệu</a>
+                               </li>
+                               <li class="navbar_list-menu-selection">
+                                   <a href="">Sản phẩm đã xem</a>
+                               </li>
+                               <li class="navbar_list-menu-selection">
+                                   <a href="">Trung tâm bảo hành</a>
+                               </li>
+                               <li class="navbar_list-menu-selection">
+                                   <a href="">Hệ thống 126 siêu thị</a>
+                               </li>
+                               <li class="navbar_list-menu-selection">
+                                   <a href="">Tuyển dụng</a>
+                               </li>
+                               <li class="navbar_list-menu-selection">
+                                   <a href="">Tra cứu đơn hàng</a>
+                               </li>
+                               <li class="navbar_list-menu-selection">
+                                <a style="color:darkturquoise;font-size: 1.6rem;" id="showForm" href="/conttact.html">Liên hệ</a>
                             </li>
                             <li class="navbar_list-menu-selection">
-                                <a href="">Giới thiệu</a>
-                            </li>
-                            <li class="navbar_list-menu-selection">
-                                <a href="">Sản phẩm đã xem</a>
-                            </li>
-                            <li class="navbar_list-menu-selection">
-                                <a href="">Trung tâm bảo hành</a>
-                            </li>
-                            <li class="navbar_list-menu-selection">
-                                <a href="">Hệ thống 126 siêu thị</a>
-                            </li>
-                            <li class="navbar_list-menu-selection">
-                                <a href="">Tuyển dụng</a>
-                            </li>
-                            <li class="navbar_list-menu-selection">
-                                <a href="">Tra cứu đơn hàng</a>
-                            </li>
-                            <li class="navbar_list-menu-selection">
-                                <a href="">Đăng nhập</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
+                             <a style="color:darkturquoise;font-size: 1.6rem;" id="showForm" href="/register.html">Đăng ký</a>
+                         </li>
+                           </ul>
+                       </div>
+                   </div>
+              </div>
            </div>
-        </div>
-    </div>
+       </div>
+   
+       <div class="heading-navbar">
+           <div class="container-xl">
+               <div class="row">
+                   <div class="col-3 col-lg-2 col-md-2 col-sm-3 col-xs-3 d-xl-none d-lg-block d-block d-md-block d-sm-block">
+                       <div class="nav-bars">
+                           <i class="fa-solid fa-bars"></i>
+                           <!-- menu -->
+                            <div id="mobile-menu" class="mobile-menu">
+                                <ul>
+                                    <li><a href="/register.html">Đăng ký</a></li>
+                                    <li><a href="/conttact.html">Liên hệ</a></li>
+                                    <li><a href="#">Kiểm tra đơn hàng</a></li>
+                                    <li><a href="#">Thiết lập tài khoản</a></li>
+                                    <li><a href="#">Đăng xuất</a></li>
+                                </ul>
+                            </div>
+                       </div>
+                   </div>
+                   <div class="col-6 col-lg-2 col-md-3 col-sm-6 col-xs-6 center">
+                       <div class="logo">
+                           <a href="/">
+                               <img src="/images/logo-no-background.png" alt="" class="logo__img">
+                           </a>
+                       </div>
+                   </div>   
+                   <div class="d-none d-md-block col-6 col-lg-6 col-md-5 col-sm-5">
+                       <div class="search-box">
+                           <input type="text" name="" id="" placeholder="Bạn muốn tìm gì?">
+                           <button class="search">
+                               <i class="fa-solid fa-magnifying-glass"></i>
+                           </button>
+                       </div>
+                   </div>
+                   <div class=" col-2 col-lg-2 col-md-2 col-sm-2 d-none d-md-none d-sm-none d-lg-none d-xl-block">
+                           <div class="check_oder hide-on-mobile hide-on-tablet ">
+                               <i class="check_oder-truck fa-solid fa-truck"></i>
+                               <p class="check_oder-text">Kiểm tra đơn hàng</p>
+                           </div>
+                   </div>
+                   <div class="col-3 col-lg-2 col-md-2 col-sm-3 col-xs-3">
+                       <div class="cart">
+                           <i class="fa-solid fa-cart-shopping"></i>
+                           <!-- <span class="cart-notice">0</span> -->
+                       </div>
+                   </div>
+               </div>
+               <div class="row">
+                   <div class="col-12 d-xl-none d-lg-none d-md-none d-sm-block">
+                       <div class="search-box">
+                           <input type="text" name="" id="" placeholder="Bạn muốn tìm gì?">
+                           <button class="search">
+                               <i class="fa-solid fa-magnifying-glass"></i>
+                           </button>
+                       </div>
+                   </div>
+               </div>
+           </div>
+       </div>
 
-    <div class="heading-navbar">
-        <div class="grid wide">
-            <div class="row">
-                <div class="col v-1  l-0 m-1 c-2 ">
-                    <label for="nav-mobile-input" class="category">
-                        <div class="category__selection">
-                            <i class="category__selection-item fa-solid fa-bars"></i>
-                        </div>
-                    </label>
+       
 
-                    <input type="checkbox" name="" hidden class="nav__input" id="nav-mobile-input">
-                    <!-- category on moblite tablet pc low -->
-                    <label for="nav-mobile-input" class="nav__overlay"></label>
-
-                   <nav class="category-mobile">
-                    <label for="nav-mobile-input" class="nav__mobile-close">
-                        <i class="fa-solid fa-xmark"></i>
-                    </label>
-                        <ul class="category-mobile__container-list">
-                            <li class="category-mobile__container-item">
-                                <div class="category-mobile__container-item--icon">
-                                    <i class="category__icon-deviece fa-solid fa-mobile-screen-button"></i>
-                                </div>
-                                <span>ĐIỆN THOẠI</span>
-                                <i class="category__icon-down fa-solid fa-chevron-down"></i>
-                            </li>
-                            <li class="category-mobile__container-item">
-                                <div class="category-mobile__container-item--icon">
-                                    <i class="category__icon-deviece fa-solid fa-clock"></i>
-                                </div>
-                                <span>ĐỒNG HỒ</span>
-                                <i class="category__icon-down fa-solid fa-chevron-down"></i>
-                            </li>
-                            <li class="category-mobile__container-item">
-                                <div class="category-mobile__container-item--icon">
-                                    <i class="category__icon-deviece fa-solid fa-laptop"></i>
-                                </div>
-                                <span>LAPTOP</span>
-                                <i class="category__icon-down fa-solid fa-chevron-down"></i>
-                            </li>
-                            <li class="category-mobile__container-item">
-                                <div class="category-mobile__container-item--icon">
-                                    <i class="category__icon-deviece fa-solid fa-mobile-screen-button"></i>
-                                </div>
-                                <span>APPLE</span>
-                                <i class="category__icon-down fa-solid fa-chevron-down"></i>
-                            </li>
-                            <li class="category-mobile__container-item">
-                                <div class="category-mobile__container-item--icon">
-                                    <i class="category__icon-deviece fa-solid fa-display"></i>
-                                </div>
-                                <span>MÀN HÌNH</span> 
-                                <i class="category__icon-down fa-solid fa-chevron-down"></i>
-                            </li>
-                            <li class="category-mobile__container-item">
-                                <div class="category-mobile__container-item--icon">
-                                     <i class="category__icon-deviece fa-solid fa-tv"></i>
-                                </div>
-                                <span>SMART TV</span>
-                                <i class="category__icon-down fa-solid fa-chevron-down"></i>
-                            </li>
-                            <li class="category-mobile__container-item">
-                                <div class="category-mobile__container-item--icon">
-                                    <i class="category__icon-deviece fa-solid fa-tablet"></i>
-                                </div>
-                                <span>TABLET</span>
-                                <i class="category__icon-down fa-solid fa-chevron-down"></i>
-                            </li>
-                            <li class="category-mobile__container-item">
-                                <div class="category-mobile__container-item--icon">
-                                    <i class="category__icon-deviece fa-solid fa-headphones"></i>
-                                </div>
-                                <span>ÂM THANH</span>
-                                <i class="category__icon-down fa-solid fa-chevron-down"></i>
-                            </li>
-                            <li class="category-mobile__container-item">
-                                <div class="category-mobile__container-item--icon">
-                                    <i class="category__icon-deviece fa-solid fa-house"></i>
-                                </div>
-                                <span>SMART HOME</span>
-                                <i class="category__icon-down fa-solid fa-chevron-down"></i>
-                            </li>
-                            <li class="category-mobile__container-item">
-                                <div class="category-mobile__container-item--icon">
-                                    <i class="category__icon-deviece fa-brands fa-usb"></i>
-                                </div>
-                                <span>PHỤ KIỆN</span>
-                                <i class="category__icon-down fa-solid fa-chevron-down"></i>
-                            </li>
-                            <li class="category-mobile__container-item">
-                                <div class="category-mobile__container-item--icon">
-                                    <i class="category__icon-deviece fa-solid fa-gamepad"></i>
-                                </div>
-                                <span>ĐÒ CHƠI CN</span>
-                                <i class="category__icon-down fa-solid fa-chevron-down"></i>
-                            </li>
-                            <li class="category-mobile__container-item">
-                                <div class="category-mobile__container-item--icon">
-                                    <i class="category__icon-deviece fa-solid fa-screwdriver-wrench"></i>
-                                </div>
-                                <span>SỬA CHỬA</span>
-                                <i class="category__icon-down fa-solid fa-chevron-down"></i>
-                            </li>
-                            <li class="category-mobile__container-item">
-                                <div class="category-mobile__container-item--icon">
-                                    <i class="category__icon-deviece fa-solid fa-sim-card"></i>
-                                </div>
-                                <span>SIM THẺ</span>
-                                <i class="category__icon-down fa-solid fa-chevron-down"></i>
-                            </li>
-                            <li class="category-mobile__container-item">
-                                <div class="category-mobile__container-item--icon">
-                                    <i class="category__icon-deviece fa-regular fa-newspaper"></i>
-                                </div>
-                                <span>TIN HOT</span>
-                                <i class="category__icon-down fa-solid fa-chevron-down"></i>
-                            </li>
-                            <li class="category-mobile__container-item">
-                                <div class="category-mobile__container-item--icon">
-                                    <i class="category__icon-deviece fa-solid fa-bolt-lightning"></i>
-                                </div>
-                                <span>ƯU ĐÃI</span>
-                                <i class="category__icon-down fa-solid fa-chevron-down"></i>
-                            </li>
-                        </ul>
+       <div style="margin-bottom: 30px;" class="container-xl">
+          <!-- bootstrap navbar -->
+               <div class="navbar heading_device c-0 m-0 l-12 hide-on-tablet hide-on-mobile hide-on-mobile-tablet">
+                   <div class="heading_device-container ">
+                       <ul class="heading_device-container--list">
+                           <li class="heading_device-container--item">
+                               <i class="fa-solid fa-mobile-screen-button"></i>
+                               <span>ĐIỆN THOẠI</span>
+                              
+                           </li>
+                           <li class="heading_device-container--item">
+                               <i class="fa-solid fa-clock"></i>
+                               <span>ĐỒNG HỒ</span>
+                               
+                           </li>
+                           <li class="heading_device-container--item">
+                               <i class="fa-solid fa-laptop"></i>
+                               <span>LAPTOP</span>
+                               
+                           </li>
+                           <li class="heading_device-container--item">
+                               <i class="fa-solid fa-mobile-screen-button"></i>
+                               <span>APPLE</span>
+                           </li>
+                           <li class="heading_device-container--item">
+                               <i class="fa-solid fa-display"></i>
+                               <span>MÀN HÌNH</span> 
+                               
+                           </li>
+                           <li class="heading_device-container--item">
+                               <i class="fa-solid fa-tv"></i>
+                               <span>SMART TV</span>
+                              
+                           </li>
+                           <li class="heading_device-container--item">
+                               <i class="fa-solid fa-tablet"></i>
+                               <span>TABLET</span>
+                           </li>
+                           <li class="heading_device-container--item">
+                               <i class="fa-solid fa-headphones"></i>
+                               <span>ÂM THANH</span>
+                               
+                           </li>
+                           <li class="heading_device-container--item">
+                               <i class="fa-solid fa-house"></i>
+                               <span>SMART HOME</span>
+                               
+                           </li>
+                           <li class="heading_device-container--item">
+                               <i class="fa-brands fa-usb"></i>
+                               <span>PHỤ KIỆN</span>
+                               
+                           </li>
+                           <li class="heading_device-container--item">
+                               <i class="fa-solid fa-gamepad"></i>
+                               <span>ĐÒ CHƠI CN</span>
+                               
+                           </li>
+                           <li class="heading_device-container--item">
+                               <i class="fa-solid fa-screwdriver-wrench"></i>
+                               <span>SỬA CHỬA</span>
+                               
+                           </li>
+                           <li class="heading_device-container--item">
+                               <i class="fa-solid fa-sim-card"></i>
+                               <span>SIM THẺ</span>
+                               
+                           </li>
+                           <li class="heading_device-container--item">
+                               <i class="fa-regular fa-newspaper"></i>
+                               <span>TIN HOT</span>
+                              
+                           </li>
+                           <li class="heading_device-container--item">
+                               <i class="fa-solid fa-bolt-lightning"></i>
+                               <span>ƯU ĐÃI</span>
+                               
+                           </li>
+                       </ul>
+                   </div>
+               </div>
+               <div style="display: none;" class="col l-0 m-0 c-12 heading-search">
+                   <div class="search-box">
+                       <input type="text" name="" id="" placeholder="Bạn muốn tìm gì?">
+                       <button class="search">
+                           <i class="fa-solid fa-magnifying-glass"></i>
+                       </button>
+                   </div>
+               </div>    
+            
+       </div>
+       <!-- slide -->
+       <div class="container-xl">
+           <div class="row">
+               
+               <div class="container-slide">
+                   <a href="" class="icon_left">
+                       <i class="fa-solid fa-chevron-left"></i>
+                   </a>
+                   <div style="display: none;" class="container-slide__img">
+                       <img src="./images/img1.webp" alt="Image 1">
+                   </div>
+                   <div style="display: none;" class="container-slide__img">
+                       <img src="./images/img2.webp" alt="Image 2">
+                   </div>
+                   <div style="display: none;" class="container-slide__img">
+                       <img src="./images/img3.webp" alt="Image 3">
+                   </div>
+                   <a href="" class="icon_right">
+                       <i class="fa-solid fa-chevron-right"></i>
+                   </a>
+               </div>
+              
+           </div>
+       </div>
+    </nav>
+      <div class="container-xl">
+          <div class="row">
+             
+               <div class="col-2 d-none d-md-block">
+                   <nav class="categoryy">
+                       <h3 class="category__heading">
+                           <i class="category__heading-icon fa-solid fa-list-ul"></i>
+                           Danh mục
+                       </h3>
+                       <!-- sidebar bootstrap -->
+                       <ul class="category-list sidebar">
+                           <li class="category-item category-item--active nav-item">
+                               <a href="#" class="category-item__link">IPhone</a>
+                           </li>
+                           <li class="category-item nav-item">
+                               <a href="#" class="category-item__link">SamSung</a>
+                           </li>
+                           <li class="category-item nav-item">
+                               <a href="#" class="category-item__link">OPPO</a>
+                           </li>
+                           <li class="category-item nav-item">
+                               <a href="#" class="category-item__link">Xiaomi</a>
+                           </li>
+                           <li class="category-item nav-item">
+                               <a href="#" class="category-item__link">LG</a>
+                           </li>
+                           <li class="category-item nav-item">
+                               <a href="#" class="category-item__link">Google</a>
+                           </li>
+                           <li class="category-item nav-item">
+                               <a href="#" class="category-item__link">Redmi</a>
+                           </li>
+                       </ul>
                    </nav>
                 </div>
 
-                <div class="col v-3  l-3 m-0 c-8">
-                    <div class="logo">
-                        <a href="/">
-                            <img src="/assets/img/logo-text.png" alt="" class="logo__img">
-                        </a>
-                    </div>
-                </div>
-                <div class="col v-6  l-6 m-9 c-0">
-                    <div class="search-box">
-                        <input type="text" name="" id="" placeholder="Bạn muốn tìm gì?">
-                        <button class="search">
-                            <i class="fa-solid fa-magnifying-glass"></i>
-                        </button>
-                    </div>
-                </div>
-                <div class="col v-2 l-3 m-2 c-2">
-                    <div class="container_checkbox">
-                        <div class="check_oder hide-on-mobile hide-on-tablet ">
-                            <i class="check_oder-truck fa-solid fa-truck"></i>
-                            <p class="check_oder-text">Kiểm tra đơn hàng</p>
-                        </div>
-                        <div class="cart">
-                            <i class="fa-solid fa-cart-shopping"></i>
-                            <span class="cart-notice">0</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="grid wide">
-       
-            <div class="heading_device c-0 m-0 l-12 ">
-                <div class="heading_device-container ">
-                    <ul class="heading_device-container--list">
-                        <li class="heading_device-container--item">
-                            <i class="fa-solid fa-mobile-screen-button"></i>
-                            <span>ĐIỆN THOẠI</span>
-                            <div class="container">
-                                <div class="hover_item">
-                                    <div class="hover_item-container l-6">
-                                        <h4>HÃNG SẢN XUẤT</h4>
-                                        <div class="hover_item-list">
-                                            <ul class="hover_item-list--text">
-                                                <li>Apple</li>
-                                                <li>OPPO</li>
-                                                <li>Vivo</li>
-                                                <li>ROG</li>
-                                                <li>Masstel</li>
-                                            </ul>
-                                            <ul class="hover_item-list--text">
-                                                <li>Samsung</li>
-                                                <li>Nokia</li>
-                                                <li>TECNO</li>
-                                                <li>Nubia</li>
-                                                <li>TCL</li>
-                                            </ul>
-                                            <ul class="hover_item-list--text">
-                                                <li>Xiaomi</li>
-                                                <li>Realmi</li>
-                                                <li>Infinix</li>
-                                                <li>XOR</li>
-                                                <li>Itel</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div class="hover_item-container l-3 ">
-                                        <h4>MỨC GIÁ</h4>
-                                        <div class="hover_item-list">
-                                            <ul class="hover_item-list--text">
-                                                <li>Trên 100 triệu</li>
-                                                <li>Dưới 1 triệu</li>
-                                                <li>Từ 2 đến 3 triệu</li>
-                                                <li>Từ 3 đến 4 triệu</li>
-                                                <li>Từ 6 đến 8 triệu</li>
-                                                <li>Từ 15 đến 20 triệu</li>
-                                                <li>Từ 20 đến 100 triệu</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div class="hover_item-container l-3">
-                                        <h4>QUAN TÂM NHẤT</h4>
-                                        <div class="hover_item-list">
-                                            <ul class="hover_item-list--text">
-                                                <li>Hôm qua</li>
-                                                <li>Tuần này</li>
-                                                <li>Tháng này</li>
-                                                <li>Năm nay</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="heading_device-container--item">
-                            <i class="fa-solid fa-clock"></i>
-                            <span>ĐỒNG HỒ</span>
-                            <div class="container container-watch">
-                                <div class="hover_item">
-                                    <div class="hover_item-container l-12">
-                                        <h4>ĐỒNG HỒ</h4>
-                                        <div class="hover_item-list">
-                                            <ul class="hover_item-list--text">
-                                                <li>Apple</li>
-                                                <li>Xiaomi</li>
-                                                <li>Masstel</li>
-                                                <li>Top vòng đeo tay</li>  
-                                            </ul>
-                                            <ul class="hover_item-list--text">
-                                                <li>Garmin</li>
-                                                <li>Amazfit</li>
-                                                <li>OPPO</li>
-                                                <li>Fitbit</li>
-                                            </ul>
-                                            <ul class="hover_item-list--text">
-                                                <li>Huawei</li>
-                                                <li>Đồng hồ trẻ em</li>
-                                                <li>Realmi</li>
-                                            </ul>
-                                            <ul class="hover_item-list--text">
-                                               <li>Samsung</li>
-                                               <li>Kieslect</li>
-                                               <li>SoundPEATS</li>
-                                           </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="heading_device-container--item">
-                            <i class="fa-solid fa-laptop"></i>
-                            <span>LAPTOP</span>
-                            <div class="container container-laptop">
-                                <div class="hover_item">
-                                    <div class="hover_item-container l-8">
-                                        <h4>HÃNG SẢN XUẤT</h4>
-                                        <div class="hover_item-list">
-                                            <ul class="hover_item-list--text">
-                                                <li>Apple</li>
-                                                <li>Acer</li>
-                                                <li>Huawei</li>
-                                                <li>HP</li>  
-                                                <li>Xiaomi</li>  
-                                            </ul>
-                                            <ul class="hover_item-list--text">
-                                                <li>ASUS</li>
-                                                <li>MSI</li>
-                                                <li>Surface</li>
-                                                <li>GIGABYTE</li>
-                                                <li>Masstel</li>
-                                            </ul>
-                                            <ul class="hover_item-list--text">
-                                                <li>Dell</li>
-                                                <li>LG</li>
-                                                <li>Lenovo</li>
-                                                <li>Itel</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div class="hover_item-container l-4 ">
-                                       <h4>MỨC GIÁ</h4>
-                                       <div class="hover_item-list">
-                                           <ul class="hover_item-list--text">
-                                               <li>Từ 12 đến 15 triệu</li>
-                                               <li>Trên 20 đến 50 triệu</li>
-                                               <li>Trên 50 triệu</li>
-                                           </ul>
-                                       </div>
-                                   </div>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="heading_device-container--item">
-                            <i class="fa-solid fa-mobile-screen-button"></i>
-                            <span>APPLE</span>
-                        </li>
-                        <li class="heading_device-container--item">
-                            <i class="fa-solid fa-display"></i>
-                            <span>MÀN HÌNH</span> 
-                            <div class="container container-screen">
-                                <div class="hover_item">
-                                    <div class="hover_item-container l-8">
-                                        <h4>HÃNG SẢN XUẤT</h4>
-                                        <div class="hover_item-list">
-                                            <ul class="hover_item-list--text">
-                                                <li>Apple</li>
-                                                <li>Acer</li>
-                                                <li>Huawei</li>
-                                                <li>HP</li>  
-                                                <li>Xiaomi</li>  
-                                            </ul>
-                                            <ul class="hover_item-list--text">
-                                                <li>ASUS</li>
-                                                <li>MSI</li>
-                                                <li>Surface</li>
-                                                <li>GIGABYTE</li>
-                                                <li>Masstel</li>
-                                            </ul>
-                                            <ul class="hover_item-list--text">
-                                                <li>Dell</li>
-                                                <li>LG</li>
-                                                <li>Lenovo</li>
-                                                <li>Itel</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div class="hover_item-container l-4 ">
-                                       <h4>MỨC GIÁ</h4>
-                                       <div class="hover_item-list">
-                                           <ul class="hover_item-list--text">
-                                               <li>Từ 12 đến 15 triệu</li>
-                                               <li>Trên 20 đến 50 triệu</li>
-                                               <li>Trên 50 triệu</li>
-                                           </ul>
-                                       </div>
-                                   </div>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="heading_device-container--item">
-                            <i class="fa-solid fa-tv"></i>
-                            <span>SMART TV</span>
-                            <div class="container container-TV">
-                                <div class="hover_item">
-                                    <div class="hover_item-container l-8">
-                                        <h4>HÃNG SẢN XUẤT</h4>
-                                        <div class="hover_item-list">
-                                            <ul class="hover_item-list--text">
-                                                <li>Apple</li>
-                                                <li>Acer</li>
-                                                <li>Huawei</li>
-                                                <li>HP</li>  
-                                                <li>Xiaomi</li>  
-                                            </ul>
-                                            <ul class="hover_item-list--text">
-                                                <li>ASUS</li>
-                                                <li>MSI</li>
-                                                <li>Surface</li>
-                                                <li>GIGABYTE</li>
-                                                <li>Masstel</li>
-                                            </ul>
-                                            <ul class="hover_item-list--text">
-                                                <li>Dell</li>
-                                                <li>LG</li>
-                                                <li>Lenovo</li>
-                                                <li>Itel</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div class="hover_item-container l-4 ">
-                                       <h4>MỨC GIÁ</h4>
-                                       <div class="hover_item-list">
-                                           <ul class="hover_item-list--text">
-                                               <li>Từ 12 đến 15 triệu</li>
-                                               <li>Trên 20 đến 50 triệu</li>
-                                               <li>Trên 50 triệu</li>
-                                           </ul>
-                                       </div>
-                                   </div>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="heading_device-container--item">
-                            <i class="fa-solid fa-tablet"></i>
-                            <span>TABLET</span>
-                            <div class="container container-tablet">
-                                <div class="hover_item">
-                                    <div class="hover_item-container l-8">
-                                        <h4>HÃNG SẢN XUẤT</h4>
-                                        <div class="hover_item-list">
-                                            <ul class="hover_item-list--text">
-                                                <li>Apple</li>
-                                                <li>Acer</li>
-                                                <li>Huawei</li>
-                                                <li>HP</li>  
-                                                <li>Xiaomi</li>  
-                                            </ul>
-                                            <ul class="hover_item-list--text">
-                                                <li>ASUS</li>
-                                                <li>MSI</li>
-                                                <li>Surface</li>
-                                                <li>GIGABYTE</li>
-                                                <li>Masstel</li>
-                                            </ul>
-                                            <ul class="hover_item-list--text">
-                                                <li>Dell</li>
-                                                <li>LG</li>
-                                                <li>Lenovo</li>
-                                                <li>Itel</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div class="hover_item-container l-4 ">
-                                       <h4>MỨC GIÁ</h4>
-                                       <div class="hover_item-list">
-                                           <ul class="hover_item-list--text">
-                                               <li>Từ 12 đến 15 triệu</li>
-                                               <li>Trên 20 đến 50 triệu</li>
-                                               <li>Trên 50 triệu</li>
-                                           </ul>
-                                       </div>
-                                   </div>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="heading_device-container--item">
-                            <i class="fa-solid fa-headphones"></i>
-                            <span>ÂM THANH</span>
-                            <div class="container container-sound">
-                                <div class="hover_item">
-                                    <div class="hover_item-container l-8">
-                                        <h4>HÃNG SẢN XUẤT</h4>
-                                        <div class="hover_item-list">
-                                            <ul class="hover_item-list--text">
-                                                <li>Apple</li>
-                                                <li>Acer</li>
-                                                <li>Huawei</li>
-                                                <li>HP</li>  
-                                                <li>Xiaomi</li>  
-                                            </ul>
-                                            <ul class="hover_item-list--text">
-                                                <li>ASUS</li>
-                                                <li>MSI</li>
-                                                <li>Surface</li>
-                                                <li>GIGABYTE</li>
-                                                <li>Masstel</li>
-                                            </ul>
-                                            <ul class="hover_item-list--text">
-                                                <li>Dell</li>
-                                                <li>LG</li>
-                                                <li>Lenovo</li>
-                                                <li>Itel</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div class="hover_item-container l-4 ">
-                                       <h4>MỨC GIÁ</h4>
-                                       <div class="hover_item-list">
-                                           <ul class="hover_item-list--text">
-                                               <li>Từ 12 đến 15 triệu</li>
-                                               <li>Trên 20 đến 50 triệu</li>
-                                               <li>Trên 50 triệu</li>
-                                           </ul>
-                                       </div>
-                                   </div>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="heading_device-container--item">
-                            <i class="fa-solid fa-house"></i>
-                            <span>SMART HOME</span>
-                            <div class="container container-home">
-                                <div class="hover_item">
-                                    <div class="hover_item-container l-8">
-                                        <h4>HÃNG SẢN XUẤT</h4>
-                                        <div class="hover_item-list">
-                                            <ul class="hover_item-list--text">
-                                                <li>Apple</li>
-                                                <li>Acer</li>
-                                                <li>Huawei</li>
-                                                <li>HP</li>  
-                                                <li>Xiaomi</li>  
-                                            </ul>
-                                            <ul class="hover_item-list--text">
-                                                <li>ASUS</li>
-                                                <li>MSI</li>
-                                                <li>Surface</li>
-                                                <li>GIGABYTE</li>
-                                                <li>Masstel</li>
-                                            </ul>
-                                            <ul class="hover_item-list--text">
-                                                <li>Dell</li>
-                                                <li>LG</li>
-                                                <li>Lenovo</li>
-                                                <li>Itel</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div class="hover_item-container l-4 ">
-                                       <h4>MỨC GIÁ</h4>
-                                       <div class="hover_item-list">
-                                           <ul class="hover_item-list--text">
-                                               <li>Từ 12 đến 15 triệu</li>
-                                               <li>Trên 20 đến 50 triệu</li>
-                                               <li>Trên 50 triệu</li>
-                                           </ul>
-                                       </div>
-                                   </div>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="heading_device-container--item">
-                            <i class="fa-brands fa-usb"></i>
-                            <span>PHỤ KIỆN</span>
-                            <div class="container container-accessory">
-                                <div class="hover_item">
-                                    <div class="hover_item-container l-8">
-                                        <h4>HÃNG SẢN XUẤT</h4>
-                                        <div class="hover_item-list">
-                                            <ul class="hover_item-list--text">
-                                                <li>Apple</li>
-                                                <li>Acer</li>
-                                                <li>Huawei</li>
-                                                <li>HP</li>  
-                                                <li>Xiaomi</li>  
-                                            </ul>
-                                            <ul class="hover_item-list--text">
-                                                <li>ASUS</li>
-                                                <li>MSI</li>
-                                                <li>Surface</li>
-                                                <li>GIGABYTE</li>
-                                                <li>Masstel</li>
-                                            </ul>
-                                            <ul class="hover_item-list--text">
-                                                <li>Dell</li>
-                                                <li>LG</li>
-                                                <li>Lenovo</li>
-                                                <li>Itel</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div class="hover_item-container l-4 ">
-                                       <h4>MỨC GIÁ</h4>
-                                       <div class="hover_item-list">
-                                           <ul class="hover_item-list--text">
-                                               <li>Từ 12 đến 15 triệu</li>
-                                               <li>Trên 20 đến 50 triệu</li>
-                                               <li>Trên 50 triệu</li>
-                                           </ul>
-                                       </div>
-                                   </div>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="heading_device-container--item">
-                            <i class="fa-solid fa-gamepad"></i>
-                            <span>ĐÒ CHƠI CN</span>
-                            <div class="container container-play">
-                                <div class="hover_item">
-                                    <div class="hover_item-container l-8">
-                                        <h4>HÃNG SẢN XUẤT</h4>
-                                        <div class="hover_item-list">
-                                            <ul class="hover_item-list--text">
-                                                <li>Apple</li>
-                                                <li>Acer</li>
-                                                <li>Huawei</li>
-                                                <li>HP</li>  
-                                                <li>Xiaomi</li>  
-                                            </ul>
-                                            <ul class="hover_item-list--text">
-                                                <li>ASUS</li>
-                                                <li>MSI</li>
-                                                <li>Surface</li>
-                                                <li>GIGABYTE</li>
-                                                <li>Masstel</li>
-                                            </ul>
-                                            <ul class="hover_item-list--text">
-                                                <li>Dell</li>
-                                                <li>LG</li>
-                                                <li>Lenovo</li>
-                                                <li>Itel</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div class="hover_item-container l-4 ">
-                                       <h4>MỨC GIÁ</h4>
-                                       <div class="hover_item-list">
-                                           <ul class="hover_item-list--text">
-                                               <li>Từ 12 đến 15 triệu</li>
-                                               <li>Trên 20 đến 50 triệu</li>
-                                               <li>Trên 50 triệu</li>
-                                           </ul>
-                                       </div>
-                                   </div>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="heading_device-container--item">
-                            <i class="fa-solid fa-screwdriver-wrench"></i>
-                            <span>SỬA CHỬA</span>
-                            <div class="container container-repair">
-                                <div class="hover_item">
-                                    <div class="hover_item-container l-8">
-                                        <h4>HÃNG SẢN XUẤT</h4>
-                                        <div class="hover_item-list">
-                                            <ul class="hover_item-list--text">
-                                                <li>Apple</li>
-                                                <li>Acer</li>
-                                                <li>Huawei</li>
-                                                <li>HP</li>  
-                                                <li>Xiaomi</li>  
-                                            </ul>
-                                            <ul class="hover_item-list--text">
-                                                <li>ASUS</li>
-                                                <li>MSI</li>
-                                                <li>Surface</li>
-                                                <li>GIGABYTE</li>
-                                                <li>Masstel</li>
-                                            </ul>
-                                            <ul class="hover_item-list--text">
-                                                <li>Dell</li>
-                                                <li>LG</li>
-                                                <li>Lenovo</li>
-                                                <li>Itel</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div class="hover_item-container l-4 ">
-                                       <h4>MỨC GIÁ</h4>
-                                       <div class="hover_item-list">
-                                           <ul class="hover_item-list--text">
-                                               <li>Từ 12 đến 15 triệu</li>
-                                               <li>Trên 20 đến 50 triệu</li>
-                                               <li>Trên 50 triệu</li>
-                                           </ul>
-                                       </div>
-                                   </div>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="heading_device-container--item">
-                            <i class="fa-solid fa-sim-card"></i>
-                            <span>SIM THẺ</span>
-                            <div class="container container-sim">
-                                <div class="hover_item">
-                                    <div class="hover_item-container l-8">
-                                        <h4>HÃNG SẢN XUẤT</h4>
-                                        <div class="hover_item-list">
-                                            <ul class="hover_item-list--text">
-                                                <li>Apple</li>
-                                                <li>Acer</li>
-                                                <li>Huawei</li>
-                                                <li>HP</li>  
-                                                <li>Xiaomi</li>  
-                                            </ul>
-                                            <ul class="hover_item-list--text">
-                                                <li>ASUS</li>
-                                                <li>MSI</li>
-                                                <li>Surface</li>
-                                                <li>GIGABYTE</li>
-                                                <li>Masstel</li>
-                                            </ul>
-                                            <ul class="hover_item-list--text">
-                                                <li>Dell</li>
-                                                <li>LG</li>
-                                                <li>Lenovo</li>
-                                                <li>Itel</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div class="hover_item-container l-4 ">
-                                       <h4>MỨC GIÁ</h4>
-                                       <div class="hover_item-list">
-                                           <ul class="hover_item-list--text">
-                                               <li>Từ 12 đến 15 triệu</li>
-                                               <li>Trên 20 đến 50 triệu</li>
-                                               <li>Trên 50 triệu</li>
-                                           </ul>
-                                       </div>
-                                   </div>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="heading_device-container--item">
-                            <i class="fa-regular fa-newspaper"></i>
-                            <span>TIN HOT</span>
-                            <div class="container container-hot">
-                                <div class="hover_item">
-                                    <div class="hover_item-container l-8">
-                                        <h4>HÃNG SẢN XUẤT</h4>
-                                        <div class="hover_item-list">
-                                            <ul class="hover_item-list--text">
-                                                <li>Apple</li>
-                                                <li>Acer</li>
-                                                <li>Huawei</li>
-                                                <li>HP</li>  
-                                                <li>Xiaomi</li>  
-                                            </ul>
-                                            <ul class="hover_item-list--text">
-                                                <li>ASUS</li>
-                                                <li>MSI</li>
-                                                <li>Surface</li>
-                                                <li>GIGABYTE</li>
-                                                <li>Masstel</li>
-                                            </ul>
-                                            <ul class="hover_item-list--text">
-                                                <li>Dell</li>
-                                                <li>LG</li>
-                                                <li>Lenovo</li>
-                                                <li>Itel</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div class="hover_item-container l-4 ">
-                                       <h4>MỨC GIÁ</h4>
-                                       <div class="hover_item-list">
-                                           <ul class="hover_item-list--text">
-                                               <li>Từ 12 đến 15 triệu</li>
-                                               <li>Trên 20 đến 50 triệu</li>
-                                               <li>Trên 50 triệu</li>
-                                           </ul>
-                                       </div>
-                                   </div>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="heading_device-container--item">
-                            <i class="fa-solid fa-bolt-lightning"></i>
-                            <span>ƯU ĐÃI</span>
-                            <div class="container container-endow">
-                                <div class="hover_item">
-                                    <div class="hover_item-container l-8">
-                                        <h4>HÃNG SẢN XUẤT</h4>
-                                        <div class="hover_item-list">
-                                            <ul class="hover_item-list--text">
-                                                <li>Apple</li>
-                                                <li>Acer</li>
-                                                <li>Huawei</li>
-                                                <li>HP</li>  
-                                                <li>Xiaomi</li>  
-                                            </ul>
-                                            <ul class="hover_item-list--text">
-                                                <li>ASUS</li>
-                                                <li>MSI</li>
-                                                <li>Surface</li>
-                                                <li>GIGABYTE</li>
-                                                <li>Masstel</li>
-                                            </ul>
-                                            <ul class="hover_item-list--text">
-                                                <li>Dell</li>
-                                                <li>LG</li>
-                                                <li>Lenovo</li>
-                                                <li>Itel</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div class="hover_item-container l-4 ">
-                                       <h4>MỨC GIÁ</h4>
-                                       <div class="hover_item-list">
-                                           <ul class="hover_item-list--text">
-                                               <li>Từ 12 đến 15 triệu</li>
-                                               <li>Trên 20 đến 50 triệu</li>
-                                               <li>Trên 50 triệu</li>
-                                           </ul>
-                                       </div>
-                                   </div>
-                                </div>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            <div class="col l-0 m-0 c-12 heading-search">
-                <div class="search-box">
-                    <input type="text" name="" id="" placeholder="Bạn muốn tìm gì?">
-                    <button class="search">
-                        <i class="fa-solid fa-magnifying-glass"></i>
-                    </button>
-                </div>
-            </div>    
-         
-    </div>
-   </nav>
-    
-   <div class="grid wide">
-        <div class="content-category">
-            <a href="#" class="content-category__icon-home">
-                <i class="fa-solid fa-house"></i>
-            </a>
-            <span class="content-category__text">Trang chủ</span>
-            <span class="content-category__icon-right">
-                <i class="fa-solid fa-chevron-right"></i>
-            </span>
-            <span class="content-category__text">Iphone</span>
-        </div>
-       <div class="row">
-            <div class="col l-2-4 v-3 m-4 c-6">
-                <div class="item">
-                    <a href="" class="item__img">
-                        <img src="./assets/img/IPwhite.jpg" alt="">
-                    </a>
-                    <div class="item__sticker">
-                        <img src="./assets/img/sticker.png" alt="">
-                    </div>
-                    <div class="item__info">
-                        <h4 class="item__info-title">Iphone 14 (128GB)-Chính hãng</h4>
-                        <div class="item__info-price">18,999,000 ₫</div>
-                    </div>
-                    <div class="item__price-new">
-                        <p>Giá lên đời : </p>
-                        <span>16,990,000 ₫</span>
-                    </div>
-                    <div class="item__sale">
-                        <span class="sale">KM</span>
-                        <label class="item__sale-text"> Giảm thêm tới 1,5 triệu khi đăng ký...</label>
-                        <strong class="item__sale-text--orange">VÀ 16 KM KHÁC</strong>
-                    </div>
-                    <div class="promote">
-                        <ul class="promote__list">
-                            <li>
-                                <span class="sale">KM</span>
-                                <label for="" class="promote__list-text"> Ưu đãi đến 300.000đ khi mở Ví hoặc thanh toán qua VNPAY</label>
-                            </li>
-                            <li>
-                                <span class="sale">KM</span>
-                                <label for="" class="promote__list-text"> Giảm thêm tới 1,5 triệu khi đăng ký gói cước tích điểm MobiFone.</label>
-                            </li>
-                            <li>
-                                <span class="sale">KM</span>
-                                <label for="" class="promote__list-text"> Giảm thêm tới 1.000.000đ khi Thu cũ - Lên đời iPhone 11 | 12 | 13 Series</label>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="col l-2-4 v-3 m-4 c-6">
-                <div class="item">
-                    <a href="" class="item__img">
-                        <img src="./assets/img/IPwhite.jpg" alt="">
-                    </a>
-                    <div class="item__sticker">
-                        <img src="./assets/img/sticker.png" alt="">
-                    </div>
-                    <div class="item__info">
-                        <h4 class="item__info-title">Iphone 14 (128GB)-Chính hãng</h4>
-                        <div class="item__info-price">18,999,000 ₫</div>
-                    </div>
-                    <div class="item__price-new">
-                        <p>Giá lên đời : </p>
-                        <span>16,990,000 ₫</span>
-                    </div>
-                    <div class="item__sale">
-                        <span class="sale">KM</span>
-                        <label class="item__sale-text"> Giảm thêm tới 1,5 triệu khi đăng ký...</label>
-                        <strong class="item__sale-text--orange">VÀ 16 KM KHÁC</strong>
-                    </div>
-                    <div class="promote">
-                        <ul class="promote__list">
-                            <li>
-                                <span class="sale">KM</span>
-                                <label for="" class="promote__list-text"> Ưu đãi đến 300.000đ khi mở Ví hoặc thanh toán qua VNPAY</label>
-                            </li>
-                            <li>
-                                <span class="sale">KM</span>
-                                <label for="" class="promote__list-text"> Giảm thêm tới 1,5 triệu khi đăng ký gói cước tích điểm MobiFone.</label>
-                            </li>
-                            <li>
-                                <span class="sale">KM</span>
-                                <label for="" class="promote__list-text"> Giảm thêm tới 1.000.000đ khi Thu cũ - Lên đời iPhone 11 | 12 | 13 Series</label>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="col l-2-4 v-3 m-4 c-6">
-                <div class="item">
-                    <a href="" class="item__img">
-                        <img src="./assets/img/IPwhite.jpg" alt="">
-                    </a>
-                    <div class="item__sticker">
-                        <img src="./assets/img/sticker.png" alt="">
-                    </div>
-                    <div class="item__info">
-                        <h4 class="item__info-title">Iphone 14 (128GB)-Chính hãng</h4>
-                        <div class="item__info-price">18,999,000 ₫</div>
-                    </div>
-                    <div class="item__price-new">
-                        <p>Giá lên đời : </p>
-                        <span>16,990,000 ₫</span>
-                    </div>
-                    <div class="item__sale">
-                        <span class="sale">KM</span>
-                        <label class="item__sale-text"> Giảm thêm tới 1,5 triệu khi đăng ký...</label>
-                        <strong class="item__sale-text--orange">VÀ 16 KM KHÁC</strong>
-                    </div>
-                    <div class="promote">
-                        <ul class="promote__list">
-                            <li>
-                                <span class="sale">KM</span>
-                                <label for="" class="promote__list-text"> Ưu đãi đến 300.000đ khi mở Ví hoặc thanh toán qua VNPAY</label>
-                            </li>
-                            <li>
-                                <span class="sale">KM</span>
-                                <label for="" class="promote__list-text"> Giảm thêm tới 1,5 triệu khi đăng ký gói cước tích điểm MobiFone.</label>
-                            </li>
-                            <li>
-                                <span class="sale">KM</span>
-                                <label for="" class="promote__list-text"> Giảm thêm tới 1.000.000đ khi Thu cũ - Lên đời iPhone 11 | 12 | 13 Series</label>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="col l-2-4 v-3 m-4 c-6">
-                <div class="item">
-                    <a href="" class="item__img">
-                        <img src="./assets/img/IPwhite.jpg" alt="">
-                    </a>
-                    <div class="item__sticker">
-                        <img src="./assets/img/sticker.png" alt="">
-                    </div>
-                    <div class="item__info">
-                        <h4 class="item__info-title">Iphone 14 (128GB)-Chính hãng</h4>
-                        <div class="item__info-price">18,999,000 ₫</div>
-                    </div>
-                    <div class="item__price-new">
-                        <p>Giá lên đời : </p>
-                        <span>16,990,000 ₫</span>
-                    </div>
-                    <div class="item__sale">
-                        <span class="sale">KM</span>
-                        <label class="item__sale-text"> Giảm thêm tới 1,5 triệu khi đăng ký...</label>
-                        <strong class="item__sale-text--orange">VÀ 16 KM KHÁC</strong>
-                    </div>
-                    <div class="promote">
-                        <ul class="promote__list">
-                            <li>
-                                <span class="sale">KM</span>
-                                <label for="" class="promote__list-text"> Ưu đãi đến 300.000đ khi mở Ví hoặc thanh toán qua VNPAY</label>
-                            </li>
-                            <li>
-                                <span class="sale">KM</span>
-                                <label for="" class="promote__list-text"> Giảm thêm tới 1,5 triệu khi đăng ký gói cước tích điểm MobiFone.</label>
-                            </li>
-                            <li>
-                                <span class="sale">KM</span>
-                                <label for="" class="promote__list-text"> Giảm thêm tới 1.000.000đ khi Thu cũ - Lên đời iPhone 11 | 12 | 13 Series</label>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="col l-2-4 v-3 m-4 c-6">
-                <div class="item">
-                    <a href="" class="item__img">
-                        <img src="./assets/img/IPwhite.jpg" alt="">
-                    </a>
-                    <div class="item__sticker">
-                        <img src="./assets/img/sticker.png" alt="">
-                    </div>
-                    <div class="item__info">
-                        <h4 class="item__info-title">Iphone 14 (128GB)-Chính hãng</h4>
-                        <div class="item__info-price">18,999,000 ₫</div>
-                    </div>
-                    <div class="item__price-new">
-                        <p>Giá lên đời : </p>
-                        <span>16,990,000 ₫</span>
-                    </div>
-                    <div class="item__sale">
-                        <span class="sale">KM</span>
-                        <label class="item__sale-text"> Giảm thêm tới 1,5 triệu khi đăng ký...</label>
-                        <strong class="item__sale-text--orange">VÀ 16 KM KHÁC</strong>
-                    </div>
-                    <div class="promote">
-                        <ul class="promote__list">
-                            <li>
-                                <span class="sale">KM</span>
-                                <label for="" class="promote__list-text"> Ưu đãi đến 300.000đ khi mở Ví hoặc thanh toán qua VNPAY</label>
-                            </li>
-                            <li>
-                                <span class="sale">KM</span>
-                                <label for="" class="promote__list-text"> Giảm thêm tới 1,5 triệu khi đăng ký gói cước tích điểm MobiFone.</label>
-                            </li>
-                            <li>
-                                <span class="sale">KM</span>
-                                <label for="" class="promote__list-text"> Giảm thêm tới 1.000.000đ khi Thu cũ - Lên đời iPhone 11 | 12 | 13 Series</label>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-             <div class="col l-2-4 v-3 m-4 c-6">
-                <div class="item">
-                    <a href="" class="item__img">
-                        <img src="./assets/img/IPwhite.jpg" alt="">
-                    </a>
-                    <div class="item__sticker">
-                        <img src="./assets/img/sticker.png" alt="">
-                    </div>
-                    <div class="item__info">
-                        <h4 class="item__info-title">Iphone 14 (128GB)-Chính hãng</h4>
-                        <div class="item__info-price">18,999,000 ₫</div>
-                    </div>
-                    <div class="item__price-new">
-                        <p>Giá lên đời : </p>
-                        <span>16,990,000 ₫</span>
-                    </div>
-                    <div class="item__sale">
-                        <span class="sale">KM</span>
-                        <label class="item__sale-text"> Giảm thêm tới 1,5 triệu khi đăng ký...</label>
-                        <strong class="item__sale-text--orange">VÀ 16 KM KHÁC</strong>
-                    </div>
-                    <div class="promote">
-                        <ul class="promote__list">
-                            <li>
-                                <span class="sale">KM</span>
-                                <label for="" class="promote__list-text"> Ưu đãi đến 300.000đ khi mở Ví hoặc thanh toán qua VNPAY</label>
-                            </li>
-                            <li>
-                                <span class="sale">KM</span>
-                                <label for="" class="promote__list-text"> Giảm thêm tới 1,5 triệu khi đăng ký gói cước tích điểm MobiFone.</label>
-                            </li>
-                            <li>
-                                <span class="sale">KM</span>
-                                <label for="" class="promote__list-text"> Giảm thêm tới 1.000.000đ khi Thu cũ - Lên đời iPhone 11 | 12 | 13 Series</label>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="col l-2-4 v-3 m-4 c-6">
-                <div class="item">
-                    <a href="" class="item__img">
-                        <img src="./assets/img/IPwhite.jpg" alt="">
-                    </a>
-                    <div class="item__sticker">
-                        <img src="./assets/img/sticker.png" alt="">
-                    </div>
-                    <div class="item__info">
-                        <h4 class="item__info-title">Iphone 14 (128GB)-Chính hãng</h4>
-                        <div class="item__info-price">18,999,000 ₫</div>
-                    </div>
-                    <div class="item__price-new">
-                        <p>Giá lên đời : </p>
-                        <span>16,990,000 ₫</span>
-                    </div>
-                    <div class="item__sale">
-                        <span class="sale">KM</span>
-                        <label class="item__sale-text"> Giảm thêm tới 1,5 triệu khi đăng ký...</label>
-                        <strong class="item__sale-text--orange">VÀ 16 KM KHÁC</strong>
-                    </div>
-                    <div class="promote">
-                        <ul class="promote__list">
-                            <li>
-                                <span class="sale">KM</span>
-                                <label for="" class="promote__list-text"> Ưu đãi đến 300.000đ khi mở Ví hoặc thanh toán qua VNPAY</label>
-                            </li>
-                            <li>
-                                <span class="sale">KM</span>
-                                <label for="" class="promote__list-text"> Giảm thêm tới 1,5 triệu khi đăng ký gói cước tích điểm MobiFone.</label>
-                            </li>
-                            <li>
-                                <span class="sale">KM</span>
-                                <label for="" class="promote__list-text"> Giảm thêm tới 1.000.000đ khi Thu cũ - Lên đời iPhone 11 | 12 | 13 Series</label>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="col l-2-4 v-3 m-4 c-6">
-                <div class="item">
-                    <a href="" class="item__img">
-                        <img src="./assets/img/IPwhite.jpg" alt="">
-                    </a>
-                    <div class="item__sticker">
-                        <img src="./assets/img/sticker.png" alt="">
-                    </div>
-                    <div class="item__info">
-                        <h4 class="item__info-title">Iphone 14 (128GB)-Chính hãng</h4>
-                        <div class="item__info-price">18,999,000 ₫</div>
-                    </div>
-                    <div class="item__price-new">
-                        <p>Giá lên đời : </p>
-                        <span>16,990,000 ₫</span>
-                    </div>
-                    <div class="item__sale">
-                        <span class="sale">KM</span>
-                        <label class="item__sale-text"> Giảm thêm tới 1,5 triệu khi đăng ký...</label>
-                        <strong class="item__sale-text--orange">VÀ 16 KM KHÁC</strong>
-                    </div>
-                    <div class="promote">
-                        <ul class="promote__list">
-                            <li>
-                                <span class="sale">KM</span>
-                                <label for="" class="promote__list-text"> Ưu đãi đến 300.000đ khi mở Ví hoặc thanh toán qua VNPAY</label>
-                            </li>
-                            <li>
-                                <span class="sale">KM</span>
-                                <label for="" class="promote__list-text"> Giảm thêm tới 1,5 triệu khi đăng ký gói cước tích điểm MobiFone.</label>
-                            </li>
-                            <li>
-                                <span class="sale">KM</span>
-                                <label for="" class="promote__list-text"> Giảm thêm tới 1.000.000đ khi Thu cũ - Lên đời iPhone 11 | 12 | 13 Series</label>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="col l-2-4 v-3 m-4 c-6">
-                <div class="item">
-                    <a href="" class="item__img">
-                        <img src="./assets/img/IPwhite.jpg" alt="">
-                    </a>
-                    <div class="item__sticker">
-                        <img src="./assets/img/sticker.png" alt="">
-                    </div>
-                    <div class="item__info">
-                        <h4 class="item__info-title">Iphone 14 (128GB)-Chính hãng</h4>
-                        <div class="item__info-price">18,999,000 ₫</div>
-                    </div>
-                    <div class="item__price-new">
-                        <p>Giá lên đời : </p>
-                        <span>16,990,000 ₫</span>
-                    </div>
-                    <div class="item__sale">
-                        <span class="sale">KM</span>
-                        <label class="item__sale-text"> Giảm thêm tới 1,5 triệu khi đăng ký...</label>
-                        <strong class="item__sale-text--orange">VÀ 16 KM KHÁC</strong>
-                    </div>
-                    <div class="promote">
-                        <ul class="promote__list">
-                            <li>
-                                <span class="sale">KM</span>
-                                <label for="" class="promote__list-text"> Ưu đãi đến 300.000đ khi mở Ví hoặc thanh toán qua VNPAY</label>
-                            </li>
-                            <li>
-                                <span class="sale">KM</span>
-                                <label for="" class="promote__list-text"> Giảm thêm tới 1,5 triệu khi đăng ký gói cước tích điểm MobiFone.</label>
-                            </li>
-                            <li>
-                                <span class="sale">KM</span>
-                                <label for="" class="promote__list-text"> Giảm thêm tới 1.000.000đ khi Thu cũ - Lên đời iPhone 11 | 12 | 13 Series</label>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="col l-2-4 v-3 m-4 c-6">
-                <div class="item">
-                    <a href="" class="item__img">
-                        <img src="./assets/img/IPwhite.jpg" alt="">
-                    </a>
-                    <div class="item__sticker">
-                        <img src="./assets/img/sticker.png" alt="">
-                    </div>
-                    <div class="item__info">
-                        <h4 class="item__info-title">Iphone 14 (128GB)-Chính hãng</h4>
-                        <div class="item__info-price">18,999,000 ₫</div>
-                    </div>
-                    <div class="item__price-new">
-                        <p>Giá lên đời : </p>
-                        <span>16,990,000 ₫</span>
-                    </div>
-                    <div class="item__sale">
-                        <span class="sale">KM</span>
-                        <label class="item__sale-text"> Giảm thêm tới 1,5 triệu khi đăng ký...</label>
-                        <strong class="item__sale-text--orange">VÀ 16 KM KHÁC</strong>
-                    </div>
-                    <div class="promote">
-                        <ul class="promote__list">
-                            <li>
-                                <span class="sale">KM</span>
-                                <label for="" class="promote__list-text"> Ưu đãi đến 300.000đ khi mở Ví hoặc thanh toán qua VNPAY</label>
-                            </li>
-                            <li>
-                                <span class="sale">KM</span>
-                                <label for="" class="promote__list-text"> Giảm thêm tới 1,5 triệu khi đăng ký gói cước tích điểm MobiFone.</label>
-                            </li>
-                            <li>
-                                <span class="sale">KM</span>
-                                <label for="" class="promote__list-text"> Giảm thêm tới 1.000.000đ khi Thu cũ - Lên đời iPhone 11 | 12 | 13 Series</label>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-   </div>
 
-   <!-- footer -->
-   <footer>
-        <div class="grid wide footer-container">
-            <div class="row footer-space ">
-                <div class="col l-2-4 m-4 c-6">
-                        <div class="footer-service">
-                            <h4 class="footer-service__title">Hỗ Trợ - Dịch vụ</h4>
-                            <ul class="footer-service__list">
-                                <li>Mua hàng trả góp</li>
-                                <li>Hướng dẫn đặt hàng và thanh toán</li>
-                                <li>Tra cứu đơn hàng</li>
-                                <li>Chính sách bảo hành</li>
-                                <li>Phạm vi, điều khoản gói bảo hành mở rộng</li>
-                                <li>Chính sách bảo mật</li>
-                                <li>Chính sách giải quyết khiếu nại</li>
-                                <li>Điều khoản mua bán hàng hóa</li>
-                                <li>Câu hỏi thường gặp</li>
-                            </ul>
-                        </div>
-                </div>
-                <div class="col l-2-4 m-4 c-6">
-                        <div class="footer-service">
-                            <h4 class="footer-service__title">Thông tin liên hệ</h4>
-                            <ul class="footer-service__list">
-                                <li>Bán hàng Online</li>
-                                <li>Chăm sóc Khách Hàng</li>
-                                <li>Hỗ trợ kỹ thuật</li>
-                                <li>Hỗ trợ Bảo hành & Sửa chữa</li>
-                                <li>Liên hệ khối văn phòng</li>
-                                <li>Hợp tác kinh doanh</li>
-                                <li>Trung tâm bảo hành</li>
-                            </ul>
-                        </div>
-                </div>
-                <div class="col l-2-4 m-4 c-6">
-                        <div class="footer-service">
-                            <h4 class="footer-service__title">Hệ thống 126 siêu thị</h4>
-                            <ul class="footer-service__list">
-                                <li>Danh sách 126 siêu thị trên toàn quốc</li>
-                            </ul>
-                        </div>
-                </div>
-                <div class="col l-2-4 m-4 c-6">
-                        <div class="pay">
-                            <h4 class="pay-free">Thanh toán miễn phí</h4>
-                                <div class="pay__img">
-                                    <img src="./assets/img/logo-visa.png" alt="">
-                                    <img src="./assets/img/logo-master.png" alt="">
+                <div class="col-12 col-md-10">
+                    <div class="row">
+                            <iframe id="iframe" style="display:none ;width: 100%; height: 1200px;" name="haha" src="" frameborder="0"></iframe>
+                           <div class="col-6 col-lg-3 col-md-4 col-sm-6">
+                              <a style="    text-decoration: none;color: #333;" href="/details.html" target="haha">
+                                <div class="item">
+                                    <div href="" class="item__img">
+                                        <img src="/images/IPwhite.jpg" alt="">
+                                    </div>
+                                    <div class="item__sticker">
+                                        <img src="/images/sticker.png" alt="">
+                                    </div>
+                                    <div class="item__info">
+                                        <h4 class="item__info-title">Iphone 14 (128GB)-Chính hãng</h4>
+                                        <div class="item__info-price">18,999,000 ₫</div>
+                                    </div>
+                                    <div class="item__price-new">
+                                        <p>Giá lên đời : </p>
+                                        <span>16,990,000 ₫</span>
+                                    </div>
+                                    <div class="item__sale">
+                                        <span class="sale">KM</span>
+                                        <label class="item__sale-text"> Giảm thêm tới 1,5 triệu khi đăng ký...</label>
+                                        <strong class="item__sale-text--orange">VÀ 16 KM KHÁC</strong>
+                                    </div>
+                                    <div class="promote">
+                                        <ul class="promote__list">
+                                            <li>
+                                                <span class="sale">KM</span>
+                                                <label for="" class="promote__list-text"> Ưu đãi đến 300.000đ khi mở Ví hoặc thanh toán qua VNPAY</label>
+                                            </li>
+                                            <li>
+                                                <span class="sale">KM</span>
+                                                <label for="" class="promote__list-text"> Giảm thêm tới 1,5 triệu khi đăng ký gói cước tích điểm MobiFone.</label>
+                                            </li>
+                                            <li>
+                                                <span class="sale">KM</span>
+                                                <label for="" class="promote__list-text"> Giảm thêm tới 1.000.000đ khi Thu cũ - Lên đời iPhone 11 | 12 | 13 Series</label>
+                                            </li>
+                                        </ul>
+                                    </div>
                                 </div>
-                                <div class="pay__img">
-                                    <img src="./assets/img/logo-jcb.png" alt="">
-                                    <img src="./assets/img/logo-samsungpay.png" alt="">
-                                </div>
-                                <div class="pay__img">
-                                    <img src="./assets/img/logo-atm.png" alt="">
-                                    <img src="./assets/img/logo-vnpay.png" alt="">
-                                </div>
-                        </div>
+                              </a>
+                           </div>
+                           <div class="col-6 col-lg-3 col-md-4 col-sm-6">
+                            <a style="text-decoration: none;color: #333;" href="/details.html" target="haha">
+                              <div class="item">
+                                  <div href="" class="item__img">
+                                      <img src="/images/IPwhite.jpg" alt="">
+                                  </div>
+                                  <div class="item__sticker">
+                                      <img src="/images/sticker.png" alt="">
+                                  </div>
+                                  <div class="item__info">
+                                      <h4 class="item__info-title">Iphone 14 (128GB)-Chính hãng</h4>
+                                      <div class="item__info-price">18,999,000 ₫</div>
+                                  </div>
+                                  <div class="item__price-new">
+                                      <p>Giá lên đời : </p>
+                                      <span>16,990,000 ₫</span>
+                                  </div>
+                                  <div class="item__sale">
+                                      <span class="sale">KM</span>
+                                      <label class="item__sale-text"> Giảm thêm tới 1,5 triệu khi đăng ký...</label>
+                                      <strong class="item__sale-text--orange">VÀ 16 KM KHÁC</strong>
+                                  </div>
+                                  <div class="promote">
+                                      <ul class="promote__list">
+                                          <li>
+                                              <span class="sale">KM</span>
+                                              <label for="" class="promote__list-text"> Ưu đãi đến 300.000đ khi mở Ví hoặc thanh toán qua VNPAY</label>
+                                          </li>
+                                          <li>
+                                              <span class="sale">KM</span>
+                                              <label for="" class="promote__list-text"> Giảm thêm tới 1,5 triệu khi đăng ký gói cước tích điểm MobiFone.</label>
+                                          </li>
+                                          <li>
+                                              <span class="sale">KM</span>
+                                              <label for="" class="promote__list-text"> Giảm thêm tới 1.000.000đ khi Thu cũ - Lên đời iPhone 11 | 12 | 13 Series</label>
+                                          </li>
+                                      </ul>
+                                  </div>
+                              </div>
+                            </a>
+                         </div>
+                         <div class="col-6 col-lg-3 col-md-4 col-sm-6">
+                            <a style="    text-decoration: none;color: #333;" href="/details.html" target="haha">
+                              <div class="item">
+                                  <div href="" class="item__img">
+                                      <img src="/images/IPwhite.jpg" alt="">
+                                  </div>
+                                  <div class="item__sticker">
+                                      <img src="/images/sticker.png" alt="">
+                                  </div>
+                                  <div class="item__info">
+                                      <h4 class="item__info-title">Iphone 14 (128GB)-Chính hãng</h4>
+                                      <div class="item__info-price">18,999,000 ₫</div>
+                                  </div>
+                                  <div class="item__price-new">
+                                      <p>Giá lên đời : </p>
+                                      <span>16,990,000 ₫</span>
+                                  </div>
+                                  <div class="item__sale">
+                                      <span class="sale">KM</span>
+                                      <label class="item__sale-text"> Giảm thêm tới 1,5 triệu khi đăng ký...</label>
+                                      <strong class="item__sale-text--orange">VÀ 16 KM KHÁC</strong>
+                                  </div>
+                                  <div class="promote">
+                                      <ul class="promote__list">
+                                          <li>
+                                              <span class="sale">KM</span>
+                                              <label for="" class="promote__list-text"> Ưu đãi đến 300.000đ khi mở Ví hoặc thanh toán qua VNPAY</label>
+                                          </li>
+                                          <li>
+                                              <span class="sale">KM</span>
+                                              <label for="" class="promote__list-text"> Giảm thêm tới 1,5 triệu khi đăng ký gói cước tích điểm MobiFone.</label>
+                                          </li>
+                                          <li>
+                                              <span class="sale">KM</span>
+                                              <label for="" class="promote__list-text"> Giảm thêm tới 1.000.000đ khi Thu cũ - Lên đời iPhone 11 | 12 | 13 Series</label>
+                                          </li>
+                                      </ul>
+                                  </div>
+                              </div>
+                            </a>
+                         </div>
+                         <div class="col-6 col-lg-3 col-md-4 col-sm-6">
+                            <a style="    text-decoration: none;color: #333;" href="/details.html" target="haha">
+                              <div class="item">
+                                  <div href="" class="item__img">
+                                      <img src="/images/IPwhite.jpg" alt="">
+                                  </div>
+                                  <div class="item__sticker">
+                                      <img src="/images/sticker.png" alt="">
+                                  </div>
+                                  <div class="item__info">
+                                      <h4 class="item__info-title">Iphone 14 (128GB)-Chính hãng</h4>
+                                      <div class="item__info-price">18,999,000 ₫</div>
+                                  </div>
+                                  <div class="item__price-new">
+                                      <p>Giá lên đời : </p>
+                                      <span>16,990,000 ₫</span>
+                                  </div>
+                                  <div class="item__sale">
+                                      <span class="sale">KM</span>
+                                      <label class="item__sale-text"> Giảm thêm tới 1,5 triệu khi đăng ký...</label>
+                                      <strong class="item__sale-text--orange">VÀ 16 KM KHÁC</strong>
+                                  </div>
+                                  <div class="promote">
+                                      <ul class="promote__list">
+                                          <li>
+                                              <span class="sale">KM</span>
+                                              <label for="" class="promote__list-text"> Ưu đãi đến 300.000đ khi mở Ví hoặc thanh toán qua VNPAY</label>
+                                          </li>
+                                          <li>
+                                              <span class="sale">KM</span>
+                                              <label for="" class="promote__list-text"> Giảm thêm tới 1,5 triệu khi đăng ký gói cước tích điểm MobiFone.</label>
+                                          </li>
+                                          <li>
+                                              <span class="sale">KM</span>
+                                              <label for="" class="promote__list-text"> Giảm thêm tới 1.000.000đ khi Thu cũ - Lên đời iPhone 11 | 12 | 13 Series</label>
+                                          </li>
+                                      </ul>
+                                  </div>
+                              </div>
+                            </a>
+                         </div>
+                         <div class="col-6 col-lg-3 col-md-4 col-sm-6">
+                            <a style="    text-decoration: none;color: #333;" href="/details.html" target="haha">
+                              <div class="item">
+                                  <div href="" class="item__img">
+                                      <img src="/images/IPwhite.jpg" alt="">
+                                  </div>
+                                  <div class="item__sticker">
+                                      <img src="/images/sticker.png" alt="">
+                                  </div>
+                                  <div class="item__info">
+                                      <h4 class="item__info-title">Iphone 14 (128GB)-Chính hãng</h4>
+                                      <div class="item__info-price">18,999,000 ₫</div>
+                                  </div>
+                                  <div class="item__price-new">
+                                      <p>Giá lên đời : </p>
+                                      <span>16,990,000 ₫</span>
+                                  </div>
+                                  <div class="item__sale">
+                                      <span class="sale">KM</span>
+                                      <label class="item__sale-text"> Giảm thêm tới 1,5 triệu khi đăng ký...</label>
+                                      <strong class="item__sale-text--orange">VÀ 16 KM KHÁC</strong>
+                                  </div>
+                                  <div class="promote">
+                                      <ul class="promote__list">
+                                          <li>
+                                              <span class="sale">KM</span>
+                                              <label for="" class="promote__list-text"> Ưu đãi đến 300.000đ khi mở Ví hoặc thanh toán qua VNPAY</label>
+                                          </li>
+                                          <li>
+                                              <span class="sale">KM</span>
+                                              <label for="" class="promote__list-text"> Giảm thêm tới 1,5 triệu khi đăng ký gói cước tích điểm MobiFone.</label>
+                                          </li>
+                                          <li>
+                                              <span class="sale">KM</span>
+                                              <label for="" class="promote__list-text"> Giảm thêm tới 1.000.000đ khi Thu cũ - Lên đời iPhone 11 | 12 | 13 Series</label>
+                                          </li>
+                                      </ul>
+                                  </div>
+                              </div>
+                            </a>
+                         </div>
+                         <div class="col-6 col-lg-3 col-md-4 col-sm-6">
+                            <a style="    text-decoration: none;color: #333;" href="/details.html" target="haha">
+                              <div class="item">
+                                  <div href="" class="item__img">
+                                      <img src="/images/IPwhite.jpg" alt="">
+                                  </div>
+                                  <div class="item__sticker">
+                                      <img src="/images/sticker.png" alt="">
+                                  </div>
+                                  <div class="item__info">
+                                      <h4 class="item__info-title">Iphone 14 (128GB)-Chính hãng</h4>
+                                      <div class="item__info-price">18,999,000 ₫</div>
+                                  </div>
+                                  <div class="item__price-new">
+                                      <p>Giá lên đời : </p>
+                                      <span>16,990,000 ₫</span>
+                                  </div>
+                                  <div class="item__sale">
+                                      <span class="sale">KM</span>
+                                      <label class="item__sale-text"> Giảm thêm tới 1,5 triệu khi đăng ký...</label>
+                                      <strong class="item__sale-text--orange">VÀ 16 KM KHÁC</strong>
+                                  </div>
+                                  <div class="promote">
+                                      <ul class="promote__list">
+                                          <li>
+                                              <span class="sale">KM</span>
+                                              <label for="" class="promote__list-text"> Ưu đãi đến 300.000đ khi mở Ví hoặc thanh toán qua VNPAY</label>
+                                          </li>
+                                          <li>
+                                              <span class="sale">KM</span>
+                                              <label for="" class="promote__list-text"> Giảm thêm tới 1,5 triệu khi đăng ký gói cước tích điểm MobiFone.</label>
+                                          </li>
+                                          <li>
+                                              <span class="sale">KM</span>
+                                              <label for="" class="promote__list-text"> Giảm thêm tới 1.000.000đ khi Thu cũ - Lên đời iPhone 11 | 12 | 13 Series</label>
+                                          </li>
+                                      </ul>
+                                  </div>
+                              </div>
+                            </a>
+                         </div>
+                         <div class="col-6 col-lg-3 col-md-4 col-sm-6">
+                            <a style="    text-decoration: none;color: #333;" href="/details.html" target="haha">
+                              <div class="item">
+                                  <div href="" class="item__img">
+                                      <img src="/images/IPwhite.jpg" alt="">
+                                  </div>
+                                  <div class="item__sticker">
+                                      <img src="/images/sticker.png" alt="">
+                                  </div>
+                                  <div class="item__info">
+                                      <h4 class="item__info-title">Iphone 14 (128GB)-Chính hãng</h4>
+                                      <div class="item__info-price">18,999,000 ₫</div>
+                                  </div>
+                                  <div class="item__price-new">
+                                      <p>Giá lên đời : </p>
+                                      <span>16,990,000 ₫</span>
+                                  </div>
+                                  <div class="item__sale">
+                                      <span class="sale">KM</span>
+                                      <label class="item__sale-text"> Giảm thêm tới 1,5 triệu khi đăng ký...</label>
+                                      <strong class="item__sale-text--orange">VÀ 16 KM KHÁC</strong>
+                                  </div>
+                                  <div class="promote">
+                                      <ul class="promote__list">
+                                          <li>
+                                              <span class="sale">KM</span>
+                                              <label for="" class="promote__list-text"> Ưu đãi đến 300.000đ khi mở Ví hoặc thanh toán qua VNPAY</label>
+                                          </li>
+                                          <li>
+                                              <span class="sale">KM</span>
+                                              <label for="" class="promote__list-text"> Giảm thêm tới 1,5 triệu khi đăng ký gói cước tích điểm MobiFone.</label>
+                                          </li>
+                                          <li>
+                                              <span class="sale">KM</span>
+                                              <label for="" class="promote__list-text"> Giảm thêm tới 1.000.000đ khi Thu cũ - Lên đời iPhone 11 | 12 | 13 Series</label>
+                                          </li>
+                                      </ul>
+                                  </div>
+                              </div>
+                            </a>
+                         </div>
+                         <div class="col-6 col-lg-3 col-md-4 col-sm-6">
+                            <a style="    text-decoration: none;color: #333;" href="/details.html" target="haha">
+                              <div class="item">
+                                  <div href="" class="item__img">
+                                      <img src="/images/IPwhite.jpg" alt="">
+                                  </div>
+                                  <div class="item__sticker">
+                                      <img src="/images/sticker.png" alt="">
+                                  </div>
+                                  <div class="item__info">
+                                      <h4 class="item__info-title">Iphone 14 (128GB)-Chính hãng</h4>
+                                      <div class="item__info-price">18,999,000 ₫</div>
+                                  </div>
+                                  <div class="item__price-new">
+                                      <p>Giá lên đời : </p>
+                                      <span>16,990,000 ₫</span>
+                                  </div>
+                                  <div class="item__sale">
+                                      <span class="sale">KM</span>
+                                      <label class="item__sale-text"> Giảm thêm tới 1,5 triệu khi đăng ký...</label>
+                                      <strong class="item__sale-text--orange">VÀ 16 KM KHÁC</strong>
+                                  </div>
+                                  <div class="promote">
+                                      <ul class="promote__list">
+                                          <li>
+                                              <span class="sale">KM</span>
+                                              <label for="" class="promote__list-text"> Ưu đãi đến 300.000đ khi mở Ví hoặc thanh toán qua VNPAY</label>
+                                          </li>
+                                          <li>
+                                              <span class="sale">KM</span>
+                                              <label for="" class="promote__list-text"> Giảm thêm tới 1,5 triệu khi đăng ký gói cước tích điểm MobiFone.</label>
+                                          </li>
+                                          <li>
+                                              <span class="sale">KM</span>
+                                              <label for="" class="promote__list-text"> Giảm thêm tới 1.000.000đ khi Thu cũ - Lên đời iPhone 11 | 12 | 13 Series</label>
+                                          </li>
+                                      </ul>
+                                  </div>
+                              </div>
+                            </a>
+                         </div>
+                         <div class="col-6 col-lg-3 col-md-4 col-sm-6">
+                            <a style="    text-decoration: none;color: #333;" href="/details.html" target="haha">
+                              <div class="item">
+                                  <div href="" class="item__img">
+                                      <img src="/images/IPwhite.jpg" alt="">
+                                  </div>
+                                  <div class="item__sticker">
+                                      <img src="/images/sticker.png" alt="">
+                                  </div>
+                                  <div class="item__info">
+                                      <h4 class="item__info-title">Iphone 14 (128GB)-Chính hãng</h4>
+                                      <div class="item__info-price">18,999,000 ₫</div>
+                                  </div>
+                                  <div class="item__price-new">
+                                      <p>Giá lên đời : </p>
+                                      <span>16,990,000 ₫</span>
+                                  </div>
+                                  <div class="item__sale">
+                                      <span class="sale">KM</span>
+                                      <label class="item__sale-text"> Giảm thêm tới 1,5 triệu khi đăng ký...</label>
+                                      <strong class="item__sale-text--orange">VÀ 16 KM KHÁC</strong>
+                                  </div>
+                                  <div class="promote">
+                                      <ul class="promote__list">
+                                          <li>
+                                              <span class="sale">KM</span>
+                                              <label for="" class="promote__list-text"> Ưu đãi đến 300.000đ khi mở Ví hoặc thanh toán qua VNPAY</label>
+                                          </li>
+                                          <li>
+                                              <span class="sale">KM</span>
+                                              <label for="" class="promote__list-text"> Giảm thêm tới 1,5 triệu khi đăng ký gói cước tích điểm MobiFone.</label>
+                                          </li>
+                                          <li>
+                                              <span class="sale">KM</span>
+                                              <label for="" class="promote__list-text"> Giảm thêm tới 1.000.000đ khi Thu cũ - Lên đời iPhone 11 | 12 | 13 Series</label>
+                                          </li>
+                                      </ul>
+                                  </div>
+                              </div>
+                            </a>
+                         </div>
+                         <div class="col-6 col-lg-3 col-md-4 col-sm-6">
+                            <a style="    text-decoration: none;color: #333;" href="/details.html" target="haha">
+                              <div class="item">
+                                  <div href="" class="item__img">
+                                      <img src="/images/IPwhite.jpg" alt="">
+                                  </div>
+                                  <div class="item__sticker">
+                                      <img src="/images/sticker.png" alt="">
+                                  </div>
+                                  <div class="item__info">
+                                      <h4 class="item__info-title">Iphone 14 (128GB)-Chính hãng</h4>
+                                      <div class="item__info-price">18,999,000 ₫</div>
+                                  </div>
+                                  <div class="item__price-new">
+                                      <p>Giá lên đời : </p>
+                                      <span>16,990,000 ₫</span>
+                                  </div>
+                                  <div class="item__sale">
+                                      <span class="sale">KM</span>
+                                      <label class="item__sale-text"> Giảm thêm tới 1,5 triệu khi đăng ký...</label>
+                                      <strong class="item__sale-text--orange">VÀ 16 KM KHÁC</strong>
+                                  </div>
+                                  <div class="promote">
+                                      <ul class="promote__list">
+                                          <li>
+                                              <span class="sale">KM</span>
+                                              <label for="" class="promote__list-text"> Ưu đãi đến 300.000đ khi mở Ví hoặc thanh toán qua VNPAY</label>
+                                          </li>
+                                          <li>
+                                              <span class="sale">KM</span>
+                                              <label for="" class="promote__list-text"> Giảm thêm tới 1,5 triệu khi đăng ký gói cước tích điểm MobiFone.</label>
+                                          </li>
+                                          <li>
+                                              <span class="sale">KM</span>
+                                              <label for="" class="promote__list-text"> Giảm thêm tới 1.000.000đ khi Thu cũ - Lên đời iPhone 11 | 12 | 13 Series</label>
+                                          </li>
+                                      </ul>
+                                  </div>
+                              </div>
+                            </a>
+                         </div>
+                         <div class="col-6 col-lg-3 col-md-4 col-sm-6">
+                            <a style="    text-decoration: none;color: #333;" href="/details.html" target="haha">
+                              <div class="item">
+                                  <div href="" class="item__img">
+                                      <img src="/images/IPwhite.jpg" alt="">
+                                  </div>
+                                  <div class="item__sticker">
+                                      <img src="/images/sticker.png" alt="">
+                                  </div>
+                                  <div class="item__info">
+                                      <h4 class="item__info-title">Iphone 14 (128GB)-Chính hãng</h4>
+                                      <div class="item__info-price">18,999,000 ₫</div>
+                                  </div>
+                                  <div class="item__price-new">
+                                      <p>Giá lên đời : </p>
+                                      <span>16,990,000 ₫</span>
+                                  </div>
+                                  <div class="item__sale">
+                                      <span class="sale">KM</span>
+                                      <label class="item__sale-text"> Giảm thêm tới 1,5 triệu khi đăng ký...</label>
+                                      <strong class="item__sale-text--orange">VÀ 16 KM KHÁC</strong>
+                                  </div>
+                                  <div class="promote">
+                                      <ul class="promote__list">
+                                          <li>
+                                              <span class="sale">KM</span>
+                                              <label for="" class="promote__list-text"> Ưu đãi đến 300.000đ khi mở Ví hoặc thanh toán qua VNPAY</label>
+                                          </li>
+                                          <li>
+                                              <span class="sale">KM</span>
+                                              <label for="" class="promote__list-text"> Giảm thêm tới 1,5 triệu khi đăng ký gói cước tích điểm MobiFone.</label>
+                                          </li>
+                                          <li>
+                                              <span class="sale">KM</span>
+                                              <label for="" class="promote__list-text"> Giảm thêm tới 1.000.000đ khi Thu cũ - Lên đời iPhone 11 | 12 | 13 Series</label>
+                                          </li>
+                                      </ul>
+                                  </div>
+                              </div>
+                            </a>
+                         </div>
+                         <div class="col-6 col-lg-3 col-md-4 col-sm-6">
+                            <a style="    text-decoration: none;color: #333;" href="/details.html" target="haha">
+                              <div class="item">
+                                  <div href="" class="item__img">
+                                      <img src="/images/IPwhite.jpg" alt="">
+                                  </div>
+                                  <div class="item__sticker">
+                                      <img src="/images/sticker.png" alt="">
+                                  </div>
+                                  <div class="item__info">
+                                      <h4 class="item__info-title">Iphone 14 (128GB)-Chính hãng</h4>
+                                      <div class="item__info-price">18,999,000 ₫</div>
+                                  </div>
+                                  <div class="item__price-new">
+                                      <p>Giá lên đời : </p>
+                                      <span>16,990,000 ₫</span>
+                                  </div>
+                                  <div class="item__sale">
+                                      <span class="sale">KM</span>
+                                      <label class="item__sale-text"> Giảm thêm tới 1,5 triệu khi đăng ký...</label>
+                                      <strong class="item__sale-text--orange">VÀ 16 KM KHÁC</strong>
+                                  </div>
+                                  <div class="promote">
+                                      <ul class="promote__list">
+                                          <li>
+                                              <span class="sale">KM</span>
+                                              <label for="" class="promote__list-text"> Ưu đãi đến 300.000đ khi mở Ví hoặc thanh toán qua VNPAY</label>
+                                          </li>
+                                          <li>
+                                              <span class="sale">KM</span>
+                                              <label for="" class="promote__list-text"> Giảm thêm tới 1,5 triệu khi đăng ký gói cước tích điểm MobiFone.</label>
+                                          </li>
+                                          <li>
+                                              <span class="sale">KM</span>
+                                              <label for="" class="promote__list-text"> Giảm thêm tới 1.000.000đ khi Thu cũ - Lên đời iPhone 11 | 12 | 13 Series</label>
+                                          </li>
+                                      </ul>
+                                  </div>
+                              </div>
+                            </a>
+                         </div>
+                           
+                       
+                    </div>
+                    <div class="row hide-on-tablet hide-on-mobile ">
+                       <ul class="pagination home-product__pagination">
+                           <li class="pagination-item">
+                               <a href="" class="pagination-item__link">
+                                   <i class="pagination-item__icon fa-solid fa-chevron-left"></i>
+                               </a>
+                           </li>
+                           <li class="pagination-item pagination-item--active">
+                               <a href="" class="pagination-item__link">1</a>
+                           </li>
+                           <li class="pagination-item">
+                               <a href="" class="pagination-item__link">2</a>
+                           </li>
+                           <li class="pagination-item">
+                               <a href="" class="pagination-item__link">3</a>
+                           </li>
+                           <li class="pagination-item">
+                               <a href="" class="pagination-item__link">4</a>
+                           </li>
+                           <li class="pagination-item">
+                               <a href="" class="pagination-item__link">5</a>
+                           </li>
+                           <li class="pagination-item">
+                               <a href="" class="pagination-item__link">...</a>
+                           </li>
+                           <li class="pagination-item">
+                               <a href="" class="pagination-item__link">14</a>
+                           </li>
+   
+                           <li class="pagination-item">
+                               <a href="" class="pagination-item__link">
+                                   <i class="pagination-item__icon fa-solid fa-chevron-right"></i>
+                               </a>
+                           </li>
+                       </ul>
+                    </div>
                 </div>
-                <div class="col l-2-4 m-4 c-6">
-                        <div class="delivery">
-                            <h4>Hình thức vận chuyển</h4>
-                            <div class="delivery__img">
-                                <img src="./assets/img/nhattin.jpg" alt="">
-                                <img src="./assets/img/vnpost.jpg" alt="">
+           </div>
+      </div>
+      <!-- Lien he -->
+      <div class="action-button">
+       <a href="tel:0327786217" class="phone"><i class="fa-solid fa-phone"></i></i></a>
+       <a href="https://maps.app.goo.gl/xoJkXrE8Ba5EnWip7" class="map"><i class="fa-solid fa-location-dot"></i></i></a>
+       <a href="mailto:hau69710@gmail.com" class="email"><i class="fa-solid fa-envelope"></i></a>
+       <a href="https://www.facebook.com/haihuy.tran.397" class="facebook"><i class="fa-brands fa-facebook"></i></i></a>
+     </div>
+   
+      <!-- footer -->
+      <footer>
+        
+           <div class="container-xl footer-container">
+               <div class="row footer-space ">
+                   <div class="col-6 col-lg-3 col-md-4 col-sm-6">
+                           <div class="footer-service">
+                               <h4 class="footer-service__title">Họ và tên</h4>
+                               <ul class="footer-service__list">
+                                   <li>Bùi Thanh Hậu</li>
+                               </ul>
+                           </div>
+                   </div>
+                   <div class="col-6 col-lg-3 col-md-4 col-sm-6">
+                           <div class="footer-service">
+                               <h4 class="footer-service__title">Mã số sinh viên</h4>
+                               <ul class="footer-service__list">
+                                   <li>DH52102882</li>
+                               </ul>
+                           </div>
+                   </div>
+                   <div class="col-6 col-lg-3 col-md-4 col-sm-6">
+                           <div class="footer-service">
+                               <h4 class="footer-service__title">Lớp</h4>
+                               <ul class="footer-service__list">
+                                   <li>D21_TH03</li>
+                               </ul>
+                           </div>
+                   </div>
+                   <div class="col-6 col-lg-3 col-md-4 col-sm-6">
+                            <div class="footer-service">
+                                <h4 class="footer-service__title">Chủ đề</h4>
+                                <ul class="footer-service__list">
+                                    <li>Web bán điện thoại</li>
+                                </ul>
                             </div>
-                            <div class="delivery__certification">
-                                <img src="./assets/img/logo-bct.png" alt="">
-                            </div>
-                        </div>
-                </div>
-            </div>
-        </div>  
-   </footer>
+                    </div>
+                   
+               </div>
+           </div> 
+   
+           
+      </footer>
+   </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 </html>

@@ -1,0 +1,72 @@
+ * {
+    /* padding: 0;
+    margin: 0; */
+    box-sizing: inherit;
+}
+.clear {
+    clear: both;
+}
+
+html {
+    font-size: 62.5%;
+    line-height: 1.6rem;
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box; 
+} 
+
+body {
+    background-color: rgb(244,244,244);
+}
+
+footer {
+    margin-top: 30px;
+}
+
+:root {
+    --white-color:#fff;
+    --text-color:#333;
+    --primary-color:#716df2;
+    --hover-color:#f291a3;
+    --orange-color:#f291a3;
+    --red-color:#716df2;
+    --background-color-sale:#716df2;
+    --header-height:120px;
+    --navbar-height:34px;
+}
+
+/* pagination */
+.pagination{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+}
+
+.pagination-item{
+    margin: 0 12px;
+}
+
+.pagination-item--active .pagination-item__link{
+    background-color: var(--primary-color);
+    color: var(--while-color);
+}
+.pagination-item--active .pagination-item__link:hover{
+    background-color: var(--hover-color);
+}
+
+.pagination-item__link{
+    --height:30px;
+    display: block;
+    text-decoration: none;
+    font-size: 1.8rem;
+    font-weight: 300;
+    color: #939393;
+    min-width: 40px;
+    height: var(--height);
+    line-height: var(--height);
+    text-align: center;
+    border-radius: 2px;
+}
+
+
+

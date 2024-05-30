@@ -1,9 +1,13 @@
+
 /* pc low */
-@media (min-width: 1024px) and (max-width: 1239px) {
+@media (min-width: 1024px) and (max-width: 1199px) {
     .navbar_list-menu-selection a {
         font-size: 1.1rem;
     }
     .heading_device-container {
+        display: none;
+    }
+    .heading_device {
         display: none;
     }
     
@@ -11,61 +15,68 @@
         display: none;
     } 
     .search-box {
-        margin-left: 40px;
+        margin-left: 50px;
     }
     .cart {
-        margin-left: 72px;
-    }
-    .category {
-        display: block;
-    }
-}
-/* mobile & tablet */
-@media (max-width:1023px) { 
-    .hide-on-mobile-tablet {
-        display: none;
+        /* right: 20%; */
     }
     .category {
         display: block;
     }
 }
 
+
 /* tablet */
-@media (min-width:740px) and (max-width:1023px) { 
+@media (min-width:769px) and (max-width:1023px) { 
     .hide-on-tablet {
         display: none;
     }
     .cart {
-        margin-left: 24px;
+        /* right: 25%; */
+    }
+    .container-slide__img img {
+        height: auto;
     }
 
 }
 
 /* mobile */
-@media (max-width:739px) { 
+@media (max-width:768px) { 
+    .center {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
     .hide-on-mobile {
         display: none;
     }
     .heading-navbar {
-        justify-content: space-between;
-        display: flex;
+        
+    }
+    .search-box {
+        margin-top: 10px;
+    }
+    .nav-bars {
+        font-size: 2.5rem;
+        margin: 4px 0 0 10px;
     }
     .category__selection-item {
         font-size: 2rem;
         margin: 5px 0 0 10px;
     }
-    .logo__img {
-        width: 200px;
-        margin-left: 20px;
-    }
+
+   
+    .cart {
+         margin:10px 0 0 0;
+     }
     .cart i {
-        font-size: 2rem;
+        font-size: 2.5rem;
     }
     .cart-notice {
         padding: 1px 5px;
         font-size: 1rem;
         right: -20px;
-        bottom: 4px;
+        bottom: 12px;
     }
     .cart-notice::before {
         content: "";
@@ -76,12 +87,21 @@
         transform: translateY(calc(-50% - 1px));
         border-color: transparent var(--orange-color) transparent transparent;
     }
-    .cart {
-        margin: 2px 0 0 0;
-    }
+    
     .heading-search {
         padding: 0 30px;
     }
+
+    .action-button a { 
+        width: 40px;
+        height: 40px;
+        line-height: 40px;
+        font-size: 10px;
+    }
+    .container-slide__img img {
+        height: auto;
+    }
+    
 }
 
 

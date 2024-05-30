@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="/styles/css/register.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="/scripts/register.js"></script>
+</head>
+<body>
+    <div class="main">
+        <div class="form-register" id="container-register" style="display: block;">
+   
+          <form action="" method="POST" class="form" id="registerForm">
+            <h3 class="heading">Thành viên đăng ký</h3>
+        
+            <div class="spacer"></div>
+        
+            <div class="form-group">
+              <label for="fullname" class="form-label">Tên đầy đủ</label>
+              <input id="fullname" name="fullname" type="text" placeholder="VD: Thanh Hậu" class="form-control">
+              <span class="form-message"></span>
+            </div>
+        
+            <div class="form-group">
+              <label for="email" class="form-label">Email</label>
+              <input id="email" name="email" type="text" placeholder="VD: email@domain.com" class="form-control">
+              <span class="form-message"></span>
+            </div>
+        
+            <div class="form-group">
+              <label for="password" class="form-label">Mật khẩu</label>
+              <input id="password" name="password" type="password" placeholder="VD: Thanhhau10@12" class="form-control">
+              <span class="form-message"></span>
+            </div>
+        
+            <div class="form-group">
+              <label for="number_confirmation" class="form-label">Số điện thoại</label>
+              <input id="number_confirmation" name="number_confirmation" placeholder="Nhập số điện thoại" type="number" class="form-control">
+              <span class="form-message"></span>
+            </div>
+        
+            <button class="form-submit">Đăng ký</button>
+          </form>
+        </div>
+    </div>
+</body>
+</html>
+
+
+ 
